@@ -1,5 +1,7 @@
 # DeepPaladar
 Una mirada de la cultura catalana a través de la comida. 
+
+
 ![image](https://github.com/user-attachments/assets/cac36753-45cd-4797-951e-ea120a0340e3)
 
 ## 1. Objeto del proyecto. 
