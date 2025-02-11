@@ -97,7 +97,7 @@ def chain(prompt):
 # -------------------------
 # Streamlit App Integration
 # -------------------------
-st.title("Deeppaladar 🥕🥑")
+st.title("DeepPaladar 🥕🥑")
 
 # Initialize the chatbot only once.
 if "chatbot" not in st.session_state:
