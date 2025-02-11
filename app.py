@@ -115,7 +115,7 @@ for msg in st.session_state.messages:
         st.markdown(msg["content"])
 
 # React to user input.
-if prompt := st.chat_input("Curious minds wanted!"):
+if prompt := st.chat_input("¿Necesitas conocer algún plato o receta? Ten solo pregunta! "):
     # Display the user's message.
     st.chat_message("user").markdown(prompt)
     st.session_state.messages.append({"role": "user", "content": prompt})
