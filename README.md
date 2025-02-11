@@ -32,7 +32,7 @@ El fin de este proyecto es crear un chatbot interactivo basado en Streamlit que,
 
 
 ## 4. Clases y funciones relevantes.
-# 4.1. Clase Chatbot.
+### 4.1. Clase Chatbot.
 Esta clase se encarga de gestionar toda la  lógica del chatbot dede la interacción con el modelo del lenguaje asií como con el RAC. 
 
 - **Inicialización( __init__):** con self.thread_id se genera un identificador único para cada sesión. 
