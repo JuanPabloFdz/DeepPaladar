@@ -2,7 +2,8 @@
 Una mirada de la cultura catalana a través de la comida. 
 
 
-![image](https://github.com/user-attachments/assets/cac36753-45cd-4797-951e-ea120a0340e3)
+![image](https://github.com/user-attachments/assets/5cf300ce-249f-4f27-a9a8-daa42d681511)
+
 
 ## 1. Objeto del proyecto. 
 El fin de este proyecto es crear un chatbot interactivo basado en Streamlit que, basandose en los libros de recetas y de historia de cocina catalana, sea capaz de especificarte la historia y contexto de un plato, darte la receta de ese plato, o hacerte sugerencias de alimentación para cada momentos del día. 
