@@ -38,6 +38,15 @@ Esta clase se encarga de gestionar toda la  lógica del chatbot dede la interacc
 - **Inicialización( __init__):** con self.thread_id se genera un identificador único para cada sesión. 
 - **Inicialización del modelo OpenAI:** Inicializamos el modelo ChatOpenIA, la matriz semántica del mismmo (OpenAIEmbbedings) y la base de datos FAISS donde hemos almacenado los documentos de búsqueda semántica. Estos documentos actúan como los criterios de respuesta sobre los que actuará el modelo. 
 - **Promptemplate:**  define la estructura de las preguntas y respuestas. Se incluyen variables como el historial de la conversación, el contexto y la nueva pregunta.
+- **StateGraph:** Grafo de flujo para gestionar la palicación.
+### 4.2. Función _build_graph: 
+Con ella configuramos el flujo de trabajo. Específicamente, añadiendo una conexión entre el estado inicial (START) y el modelo de lenguaje para generar respuestas.
+### 4.3. Función call_model: 
+Este método recoge el último mensaje de la conversación como pregunta, utilizará la búsqueda vectorial con "retriver.get_relevant_documents()" para encontrar los documentos relevantes dentre del db_vectorial. Tambíen se encarga de formatear la pregunta junto con el historial y el contexto, para crear el prompt que se la pasará al modelo. Tras esto, recogemos la respuesta del modelo. 
+### 4.4. Función send_message: 
+Prepara y envía el mensaje del usuario através del flujo de trabajo. 
+### 4.5 Función Chain: 
+Esta función es un "wrapper" para interactuar con el chatbot. Toma la entrada del usuario (prompt), envía el mensaje al chatbot, y devuelve la respuesta y los documentos relevantes.
 - --
 ## 5. Streamlit. 
 
