@@ -26,9 +26,11 @@ El fin de este proyecto es crear un chatbot interactivo basado en Streamlit que,
 
 
 ## 3. Background del proyecto.👁️‍🗨
-Si se observa el código se verá que la llamada de los transformes se hace de forma directa, esto es, sin hacer la previa transformación enla matriz vectorial semantica necesaria para el funcionamiento del RAC. Sin embargo, esta aun no ha sido construida tambien en el desarrollo pero no ha sido incluida por motivos de limpieda y ampliación de las fuentes. DISPONIBLE EN PRÓXIMAS ACTUALIZACIONES. 
+Si se observa el código, se verá que la llamada a los transformadores se hace de forma directa, es decir, sin realizar previamente la transformación en la matriz vectorial semántica necesaria para el funcionamiento del RAG. Sin embargo, esta aún no ha sido construida dentro del desarrollo, pero no ha sido incluida por motivos de limpieza y ampliación de las fuentes. DISPONIBLE EN PRÓXIMAS ACTUALIZACIONES.
 
-Sin embargo, es importante imformar de algunos pasos necesarios de cara a la posible replicación de este proyecto. El primero de estos pasos estriva en hacer una seleción y carga de documentos que contiene la información que queremos usar como referencia (Veáse información RAC). Dicha carga la hacemos por medio de PyPDFLoader, tras lo cual haceos la división del texto en diferentes chunks. Un avez reaslizada esta fase pasamos a hacer la matriz semántica con dichos chunks usando el OpeAIEmbbedings() y la función FAISS. Por último se crea un vector store el cual es el que se presenta en este repositorio bajo el nombre de "faiss_index". 
+Es importante informar sobre algunos pasos necesarios para la posible replicación de este proyecto. El primero de estos pasos consiste en realizar una selección y carga de documentos que contienen la información que queremos usar como referencia (véase información RAG). Dicha carga se realiza por medio de PyPDFLoader, tras lo cual se lleva a cabo la división del texto en diferentes chunks.
+
+Una vez realizada esta fase, pasamos a construir la matriz semántica con dichos chunks utilizando OpenAIEmbeddings() y la función FAISS. Por último, se crea un vector store, que es el archivo presentado en este repositorio bajo el nombre de "faiss_index"
 
 A continuación un ejemplo de como hacer este proceso: 
 ```python
@@ -57,7 +59,7 @@ vector_store.save_local("./content/faiss_index")
 
 ## 4. Clases y funciones relevantes.🦾
 ### 4.1. Clase Chatbot.
-Esta clase se encarga de gestionar toda la  lógica del chatbot dede la interacción con el modelo del lenguaje asií como con el RAC. 
+Esta clase se encarga de gestionar toda la  lógica del chatbot dede la interacción con el modelo del lenguaje asií como con el RAG. 
 
 - **Inicialización( __init__):** con self.thread_id se genera un identificador único para cada sesión. 
 - **Inicialización del modelo OpenAI:** Inicializamos el modelo ChatOpenIA, la matriz semántica del mismmo (OpenAIEmbbedings) y la base de datos FAISS donde hemos almacenado los documentos de búsqueda semántica. Estos documentos actúan como los criterios de respuesta sobre los que actuará el modelo. 
@@ -72,7 +74,7 @@ Prepara y envía el mensaje del usuario através del flujo de trabajo.
 ### 4.5 Función Chain: 
 Esta función es un "wrapper" para interactuar con el chatbot. Toma la entrada del usuario (prompt), envía el mensaje al chatbot, y devuelve la respuesta y los documentos relevantes.
 - --
-## 5. Fuentes del RAC.
+## 5. Fuentes del RAG.
 - Equipo Susaeta. (2013). Un viaje por la cocina catalana. Madrid, España: Tikal.
 - Susaeta Ediciones. (1990). Cocina catalana. Madrid, España: Susaeta Ediciones.
 
