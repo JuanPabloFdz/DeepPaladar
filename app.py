@@ -98,7 +98,6 @@ def chain(prompt):
 # Streamlit App Integration
 # -------------------------
 st.title("DeepPaladar 🥕🥑")
-st.markdown("## Un proyecto de prueba")
 
 
 # Initialize the chatbot only once.
