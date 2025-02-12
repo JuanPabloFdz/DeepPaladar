@@ -98,7 +98,7 @@ def chain(prompt):
 # Streamlit App Integration
 # -------------------------
 st.title("DeepPaladar 🥕🥑")
-
+st.markdown(### Un proyecto que proporciona la historia del recetario catalán así como sus recetas más típicas.)
 
 # Initialize the chatbot only once.
 if "chatbot" not in st.session_state:
