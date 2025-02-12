@@ -36,8 +36,8 @@ Sin embargo, es importante imformar de algunos pasos necesarios de cara a la pos
 A continuación un ejemplo de como hacer este proceso: 
 ```python
 # Define paths for your PDF books
-pdf_book1 = r"C:\Users\jpfb\OneDrive\1_WBS\9. Generative AI\Cocina catalana -- Cocina Regional (Susaeta), Madrid, 1990_ -- Susaeta Ediciones -- 9788430590742 -- 8441600ef692117053233f0871104c97 -- Anna’s Archive (1).pdf"
-pdf_book2 = r"C:\Users\jpfb\OneDrive\1_WBS\9. Generative AI\Un viaje por la cocina catalana -- Equipo Susaeta -- Madrid, Spain, 2013 -- Tikal -- 9788499282466 -- 0bab4334fdd518bb5c8c69f484480616 -- Anna’s Archive.pdf"
+pdf_book1 = r"here the path to your PDF"
+pdf_book2 = r"here the path to your PDF"
 
 # Initialize loaders for each PDF
 loader_book1 = PyPDFLoader(pdf_book1)
@@ -54,7 +54,7 @@ embeddings = OpenAIEmbeddings()
 # Build a vector store using these embeddings
 vector_store = FAISS.from_documents(all_documents, embeddings)
 vector_store.save_local("./content/faiss_index")
-
+´´´
 
 
 
