@@ -23,7 +23,6 @@ El fin de este proyecto es crear un chatbot interactivo basado en Streamlit que,
 | **langgraph.graph.START, MessagesState, StateGraph** | Define flujos de trabajo y transiciones en la aplicación. |
 | **langgraph.checkpoint.memory.MemorySaver** | Guarda el estado de la conversación. |
 | **langchain_openai.OpenAIEmbeddings** | Convierte texto en vectores numéricos. |
-| **dotenv** | Carga variables de entorno desde un archivo `.env`. |
 
 
 ## 3. Background del proyecto.👁️‍🗨
