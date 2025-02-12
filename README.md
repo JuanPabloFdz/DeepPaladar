@@ -1,8 +1,6 @@
-# DeepPaladar
+# DeepPaladar 🥕🥑
 Una mirada de la cultura catalana a través de la comida. 
 
-
-![image](https://github.com/user-attachments/assets/5cf300ce-249f-4f27-a9a8-daa42d681511)
 
 
 ## 1. Objeto del proyecto. 
@@ -12,7 +10,7 @@ El fin de este proyecto es crear un chatbot interactivo basado en Streamlit que,
 ![image](https://github.com/user-attachments/assets/5cac8163-432f-4f71-8094-bd666cf85253)
 
 
-## 2. Librerías
+## 2. Librerías📓
 
 | Librería | Descripción |
 |----------|------------|
@@ -28,7 +26,7 @@ El fin de este proyecto es crear un chatbot interactivo basado en Streamlit que,
 | **dotenv** | Carga variables de entorno desde un archivo `.env`. |
 
 
-## 3. Background del proyecto.
+## 3. Background del proyecto.👁️‍🗨
 Si se observa el código se verá que la llamada de los transformes se hace de forma directa, esto es, sin hacer la previa transformación enla matriz vectorial semantica necesaria para el funcionamiento del RAC. Sin embargo, esta aun no ha sido construida tambien en el desarrollo pero no ha sido incluida por motivos de limpieda y ampliación de las fuentes. DISPONIBLE EN PRÓXIMAS ACTUALIZACIONES. 
 
 Sin embargo, es importante imformar de algunos pasos necesarios de cara a la posible replicación de este proyecto. El primero de estos pasos estriva en hacer una seleción y carga de documentos que contiene la información que queremos usar como referencia (Veáse información RAC). Dicha carga la hacemos por medio de PyPDFLoader, tras lo cual haceos la división del texto en diferentes chunks. Un avez reaslizada esta fase pasamos a hacer la matriz semántica con dichos chunks usando el OpeAIEmbbedings() y la función FAISS. Por último se crea un vector store el cual es el que se presenta en este repositorio bajo el nombre de "faiss_index". 
@@ -58,7 +56,7 @@ vector_store.save_local("./content/faiss_index")
 
 
 
-## 4. Clases y funciones relevantes.
+## 4. Clases y funciones relevantes.🦾
 ### 4.1. Clase Chatbot.
 Esta clase se encarga de gestionar toda la  lógica del chatbot dede la interacción con el modelo del lenguaje asií como con el RAC. 
 
@@ -79,7 +77,7 @@ Esta función es un "wrapper" para interactuar con el chatbot. Toma la entrada d
 - Equipo Susaeta. (2013). Un viaje por la cocina catalana. Madrid, España: Tikal.
 - Susaeta Ediciones. (1990). Cocina catalana. Madrid, España: Susaeta Ediciones.
 
-## 6. Bibliografía y fuentes de interés. 
+## 6. Bibliografía y fuentes de interés. 📓
 - https://platform.openai.com/docs/guides/embeddings
 - https://www.formula.co/insights/how-to-use-openais-embeddings-to-make-expert-chatbots
 - https://www.youtube.com/watch?v=XctooiH0moI
