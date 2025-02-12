@@ -54,7 +54,7 @@ embeddings = OpenAIEmbeddings()
 # Build a vector store using these embeddings
 vector_store = FAISS.from_documents(all_documents, embeddings)
 vector_store.save_local("./content/faiss_index")
-´´´
+```````
 
 
 
@@ -79,6 +79,9 @@ Esta función es un "wrapper" para interactuar con el chatbot. Toma la entrada d
 - Equipo Susaeta. (2013). Un viaje por la cocina catalana. Madrid, España: Tikal.
 - Susaeta Ediciones. (1990). Cocina catalana. Madrid, España: Susaeta Ediciones.
 
-## 6. 
+## 6. Bibliografía y fuentes de interés. 
+- https://platform.openai.com/docs/guides/embeddings
+- https://www.formula.co/insights/how-to-use-openais-embeddings-to-make-expert-chatbots
+- https://www.youtube.com/watch?v=XctooiH0moI
 
 
